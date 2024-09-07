@@ -1,11 +1,11 @@
 Fast API
-
+------------------
 documnetation  : https://fastapi.tiangolo.com/
 
 CRUD : Create , Read, Update, Delete operation
 
 
-ARCHITECTURE OF RESTFUL API
+Architecture of restful api
 ------------------------------
 api/users	     GET	Get all users
 api/users/new	 GET	Show form for adding new user
@@ -24,6 +24,6 @@ Concepts Covered in the project :
 - install all requirements 
 - Routing in Fast API
 - CRUD operation 
-- ARchitecture of Rest 
+- Architecture of Rest 
 - git operations 
 ------------------------------------------------------------------------------
