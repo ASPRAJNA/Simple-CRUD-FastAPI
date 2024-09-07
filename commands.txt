@@ -1,0 +1,14 @@
+uvicorn main:app --reload
+uvicorn main:app --port=8080
+pip install uvicorn
+pip install fastapi
+  .\env\Scripts\activate
+deactivate
+python -m venv env    
+
+
+git init
+git add .
+git commit -m "FastAPI first commit"
+git remote add origin 
+git push 
