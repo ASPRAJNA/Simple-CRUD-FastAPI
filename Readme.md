@@ -1,29 +1,33 @@
 Fast API
 
-documnetation  : https://fastapi.tiangolo.com/
+CRUD operation on Task 
 
-CRUD : Create , Read, Update, Delete operation
+Concepts Covered 
+-----------------------------------
+1  DOCKER
 
+    Docker is an open platform for developing, shipping, and running applications.
+    Created an Dockefile for FastAPI, Build the file and run it as a conatiner
+    Uploaded the image to the Docker hub
+    Check "docker pull asprajna/crud_app_fastapi:tagname"
 
-ARCHITECTURE OF RESTFUL API
-------------------------------
-api/users	     GET	Get all users
-api/users/new	 GET	Show form for adding new user
-api/users	     POST	Add a user
-api/users/1	     PUT	Update a user with id = 1
-api/users/1/edit GET	Show edit form for user with id = 1
-api/users/1	     DELETE	Delete a user with id = 1
-api/users/1	     GET	Get a user with id = 1
+2  GIT
 
-Pydantic
-It enables defining models you can use (and reuse) to verify that data conforms to the format you expect before you store or process it.
+    Craeted a git repository
+    Pushed the code to Git through SSH
 
--------------------------------------------------------------------------
-Concepts Covered in the project :
-- Craete a virtual environment , acticate , deactivate 
-- install all requirements 
-- Routing in Fast API
-- CRUD operation 
-- ARchitecture of Rest 
-- git operations 
-------------------------------------------------------------------------------
+3  EC2
+
+    Created an EC2 AWS instances using AWS web interface (download .ppk/.pem)
+    Connect using .ppk file / SSH / Console
+    Pull the dockerfile and Run the container
+    Open the exported port on Public IP address of the instance
+
+4  CLOUD RUN
+    
+    Pull the Docker file
+    Create a repository in Artifact Registry of GCP using gcloud or web page
+    Push the image to Artifact Registry 
+    Create a Cloud RUN service using the image from Artifact registary
+
+    

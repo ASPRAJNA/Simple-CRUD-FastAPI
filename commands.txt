@@ -12,3 +12,45 @@ git add .
 git commit -m "FastAPI first commit"
 git remote add origin 
 git push 
+
+docker commands :
+docker build -t myimage .
+docker run -d --name mycontainer -p 80:80 myimage
+
+docker tag local-image:tagname new-repo:tagname
+docker push asprajna/crud_app_fastapi:tagname
+
+docker login
+docker run --publish 80:80 --name fastapidemo fastapi:v1
+
+sudo docker run -d --mount type=bind,source=/home/ubuntu/list_task.csv,target=/code/list_task.csv --name crud_app -p 80:80 asprajna/crud_app_fastapi:v1
+docker pull asprajna/crud_app_fastapi:v1
+
+-------------------
+Google cloud
+
+docker pull asprajna/crud_app_fastapi:v1
+
+gcloud artifacts repositories create fastapi      
+--repository-format=docker       
+--location=us-east1       
+--description="Fast API docker"       
+--async
+
+docker push us-east1-docker.pkg.dev/qwiklabs-gcp-02-ef2b5a96416f/fastapi/crud_fastapi:v1
+
+docker tag asprajna/crud_app_fastapi:v1 us-east1-docker.pkg.dev/qwiklabs-gcp-02-ef2b5a96416f/fastapi/crud_fastapi:v1
+
+gcloud run deploy crudfastapi 
+--image=us-east1-docker.pkg.dev/qwiklabs-gcp-02-ef2b5a96416f/fastapi/crud_fastapi:v1@sha256:786397bb46def620b361dd17c0d5976add211f3b6257cb427f70c9c67fb80b3e 
+--concurrency=1 
+--timeout=3600 --cpu=8 
+--memory=16Gi 
+--region=us-east1 
+--port=80
+--project=qwiklabs-gcp-02-ef2b5a96416f
+
+gcloud run services describe SERVICE
+
+gcloud config set run/region us-east1
+
